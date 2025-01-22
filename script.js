@@ -6,6 +6,10 @@ async function getWeather(city) {
     const apiKey = `Y9FJTKAD5WAYH3WUZCYKN8SMY`;
     const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=${apiKey}&contentType=json`
     const respond = await fetch(url , {mode: 'cors'});
+    if(respond.status === 400){
+        alert('Location not found');
+        return;
+    }
     const data = await respond.json();
     const condition = await data.currentConditions.conditions;
     const place = await data.resolvedAddress;
@@ -52,6 +56,7 @@ if(init){
 input.addEventListener('keydown', (e) => {
     if(e.key === 'Enter'){
         getWeather(input.value);
+        input.value = "";
     }
 })   
 
