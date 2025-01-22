@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+ 
+body{
+    background-image: url('free-photo-of-wood-texture.jpeg');
+} 
+
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.header input{
+    margin-left: auto;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+}
+
+input::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; 
+    margin-bottom: auto;
+    margin-left: 10%;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    font-size: 2em;
+}
+
+.top h1{
+    font-weight: bold;
+}
+
+.bottom-top{
+    display: flex;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    
+}
+
+.temp h1{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.temp {
+    border-right: 3px solid white;
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+}
+
+.sun-info{
+    display: flex;
+    margin-top: 40px;
+    gap: 100px;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+#temp-sign{
+    font-size: 2em;
+    margin-left: 2px;
+    margin-bottom: 30px;
+}
